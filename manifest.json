@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "FocusGuard",
+  "version": "1.0.0",
+  "description": "Restrict distracting websites with schedules, a shared daily allowance, focus sessions and cooldown-protected settings.",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage", "tabs", "alarms", "declarativeNetRequest", "webNavigation"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "FocusGuard",
+    "default_popup": "src/pages/popup.html"
+  },
+  "options_page": "src/pages/options.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["src/pages/blocked.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

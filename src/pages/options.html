@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FocusGuard settings</title>
+  <link rel="stylesheet" href="ui.css">
+  <style>
+    main { max-width: 760px; margin: 0 auto; padding: 20px; }
+    nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+    nav button.active { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+    .days label { margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>FocusGuard</h1>
+    <div id="pending"></div>
+    <nav id="nav"></nav>
+    <div id="content"></div>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

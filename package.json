@@ -1,0 +1,11 @@
+{
+  "name": "focusguard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "FocusGuard Chrome extension (Manifest V3, no build step)",
+  "scripts": {
+    "test": "TZ=Europe/London node --test test/",
+    "test:dst": "TZ=America/New_York node --test test/"
+  }
+}
